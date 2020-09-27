@@ -1,0 +1,19 @@
+{
+  "name": "01-node-basics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Bogdan Merkaln <piccasoul19@ukr.net>",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "nodemon": "^2.0.4",
+    "yargs": "^16.0.3"
+  },
+  "dependencies": {}
+}
