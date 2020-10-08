@@ -1,22 +1,26 @@
-// const argv = require("yargs").argv;
-console.log("hello!!!");
+import argv from "yargs";
+import http from "http";
+import dotenv from "dotenv";
+import listContacts from "./contacts.js";
+
+// dotenv.config();
+
+console.log(listContacts);
 
 // function invokeAction({ action, id, name, email, phone }) {
 //   switch (action) {
 //     case "list":
-//       // ...
+//       listContacts();
 //       break;
 
 //     case "get":
-//       // ... id
+//       getContactById(3);
 //       break;
 
 //     case "add":
-//       // ... name email phone
 //       break;
 
 //     case "remove":
-//       // ... id
 //       break;
 
 //     default:

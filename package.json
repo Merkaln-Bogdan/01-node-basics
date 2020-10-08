@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node --experimental-json-modules --unhandled-rejections=strict contacts.js ",
+    "nodemon": "dev index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -12,8 +13,12 @@
   "license": "ISC",
   "type": "module",
   "devDependencies": {
+    "dotenv": "^8.2.0",
     "nodemon": "^2.0.4",
     "yargs": "^16.0.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "esm": "^3.2.25",
+    "express": "^4.17.1"
+  }
 }
