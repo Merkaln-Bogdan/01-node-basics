@@ -1,31 +1,32 @@
-import argv from "yargs";
-import http from "http";
-import dotenv from "dotenv";
-import listContacts from "./contacts.js";
+const argv = require("yargs").argv;
 
-// dotenv.config();
 
-console.log(listContacts);
+const {listContacts,getContactById,removeContact,addContact} = require("./contacts.js") ;
 
-// function invokeAction({ action, id, name, email, phone }) {
-//   switch (action) {
-//     case "list":
-//       listContacts();
-//       break;
 
-//     case "get":
-//       getContactById(3);
-//       break;
 
-//     case "add":
-//       break;
 
-//     case "remove":
-//       break;
+function invokeAction({ action, id, name, email, phone }) {
+  switch (action) {
+    case "list":
+      listContacts();
+      break;
 
-//     default:
-//       console.warn("\x1B[31m Unknown action type!");
-//   }
-// }
+    case "get":
+      getContactById(id);
+      break;
 
-// invokeAction(argv);
+    case "add":
+      addContact(name, email, phone)
+      break;
+
+    case "remove":
+      removeContact(id)
+      break;
+      
+    default:
+      console.warn("\x1B[31m Unknown action type!");
+  }
+}
+
+invokeAction(argv);

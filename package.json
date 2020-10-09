@@ -4,21 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node --experimental-json-modules --unhandled-rejections=strict contacts.js ",
-    "nodemon": "dev index.js",
+    "start": "node index.js ",
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Bogdan Merkaln <piccasoul19@ukr.net>",
   "license": "ISC",
-  "type": "module",
   "devDependencies": {
     "dotenv": "^8.2.0",
     "nodemon": "^2.0.4",
     "yargs": "^16.0.3"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "esm": "^3.2.25",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "uuidv4": "^6.2.4"
   }
 }
