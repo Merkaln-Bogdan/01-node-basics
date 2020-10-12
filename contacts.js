@@ -27,7 +27,7 @@ function getContactById(contactId) {
 }
 //Show new list with added contact with spread array contacts and plus new contact with generate id (uuid)
 function addContact(name, email, phone) {
-  const ListBeforeAddContact =require(contactsPath)
+  const ListBeforeAddContact = require(contactsPath)
   const contactList = [
     ...ListBeforeAddContact,
     {
