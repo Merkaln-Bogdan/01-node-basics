@@ -8,6 +8,6 @@ userRouter.get("/", Controllers.getListContacts );
 userRouter.post("/", Controllers.validateCreateContact, Controllers.createContact);
 userRouter.get("/:contactId", Controllers.getContact);
 userRouter.delete("/:contactId", Controllers.deleteContact);
-userRouter.patch("/:contactId", Controllers.updateContacts)
+userRouter.patch("/:contactId",Controllers.validateUpdateContact, Controllers.updateContacts)
 
 module.exports=userRouter
